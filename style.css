@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Staatliches', cursive; */
+
+:root {
+  font-size: 62.5%;
+}
+
+header img {
+  margin-top: 3.2rem;
+}
+
+header h1 {
+  font-family: 'Staatliches', cursive;
+  font-weight: 400;
+  font-size: 4.8rem;
+  line-height: 3.4rem;
+
+  color: #FFFFFF;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  background: #CBC0D3;
+  padding: 2rem;
+
+  text-align: center;
+
+  margin: 3.2rem 0rem;
+
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+}
+
+.img {
+  display: grid;
+  grid-template-areas: "A B C "
+    "D B F"
+    "D E F";
+  gap: 3.2rem;
+  margin: 9rem 6rem;
+
+  animation: right_left 500ms;
+}
+
+header {
+  background: #8E9AAF;
+  text-align: center;
+  max-width: 37.7rem;
+  animation: left_right 500ms;
+}
+
+header p {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+  text-align: center;
+  line-height: 2rem;
+
+  padding: 0rem 5rem;
+  color: #FFFFFF;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main div:nth-child(1) {
+  grid-area: A;
+}
+
+main div:nth-child(2) {
+  grid-area: B;
+}
+
+main div:nth-child(3) {
+  grid-area: C;
+}
+
+main div:nth-child(4) {
+  grid-area: D;
+}
+
+main div:nth-child(5) {
+  grid-area: E;
+}
+
+main div:nth-child(6) {
+  grid-area: F;
+}
+
+footer {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  color: #4A4E69;
+
+  mix-blend-mode: normal;
+  text-align: center;
+  animation: right_left 800ms;
+}
+
+
+@media (max-width:735px) {
+  .page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .img {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  header {
+    max-width: 735px;
+  }
+}
+
+@media (max-width:1065px) {
+  .page {
+    height: 100%;
+  }
+
+  header p {
+    margin-bottom: 3rem;
+  }
+}
+
+@keyframes left_right {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes right_left {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
